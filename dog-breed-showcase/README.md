@@ -1,27 +1,74 @@
-# DogBreedShowcase
+# Dog Breed Explorer - Angular Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3.
+This Angular application allows users to explore different dog breeds and view a short bio for each breed. The application is designed with a focus on web accessibility and follows best practices such as test-driven development and SOLID principles. It utilizes a NestJS API to retrieve dog breed data, but also includes a fallback mechanism to retrieve data from the frontend in case the API is not available.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Display a list of different dog breeds
+- Click on a breed to view a short bio and details about the breed
+- Navigate through breeds using next and previous buttons
+- Responsive design for optimal viewing on different devices
 
-## Code scaffolding
+## Technologies Used
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular framework
+- TypeScript programming language
+- HTML and CSS for markup and styling
+- Jest framework for unit testing
+- NestJS API (optional, can be replaced with frontend data retrieval)
 
-## Build
+## Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Clone the repository:
 
-## Running unit tests
+```bash
+git clone <repository_url>
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Navigate to the project directory:
 
-## Running end-to-end tests
+```bash
+cd dog-breed-explorer
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Install the dependencies:
 
-## Further help
+```bash
+npm install
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Usage
+
+1. Start the application:
+
+```bash
+ng serve
+```
+
+2. Open a web browser and navigate to `http://localhost:4200` to access the Dog Breed Explorer application.
+
+## Development
+
+### Frontend
+
+The frontend of the application is built using Angular, which provides a scalable and modular structure for building web applications. The components, services, and models are organized in a logical manner to facilitate code readability and maintainability. The application follows the SOLID principles to ensure a clean and extensible architecture.
+
+The main components of the frontend are:
+
+- `BreedListComponent`: Responsible for displaying the list of dog breeds and handling breed selection events.
+- `BreedDetailsComponent`: Displays the details of the selected breed, including a short bio and other characteristics.
+- `BreedService`: Communicates with the NestJS API (or retrieves data from the frontend) to fetch the dog breeds and provide them to the components.
+- `BreedModel`: Represents the data structure of a dog breed, including its name, description, characteristics, age span, and weight.
+
+
+### Testing
+
+The application includes comprehensive unit tests to ensure code quality and reliability. The tests are written using the Jest framework and cover critical components and services. The unit tests can be run using the following command:
+
+```bash
+ng test
+```
+
+## Conclusion
+
+The Dog Breed Explorer is a simple yet functional Angular application that allows users to explore different dog breeds and view breed details. The application can serve as a starting point for further enhancements and features to create a comprehensive dog breed resource.
