@@ -1,0 +1,9 @@
+.dog-breed {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  color: blanchedalmond;
+  background-color: blue;
+  text-align: center;
+  font-size: 1.5em;
+}
