@@ -1,19 +1,22 @@
-<div class="card">
-  <h1 class="app-title">Doggo Info</h1>
-  <img [src]="breeds[currentIndex].image" alt="{{ breeds[currentIndex].name }}" class="breed-image">
-
-  <div class="card-body">
-    <h2 class="card-title">{{ breeds[currentIndex].name }}</h2>
-    <p class="card-text">{{ breeds[currentIndex].description }}</p>
-    <ul>
-      <li *ngFor="let characteristic of breeds[currentIndex].characteristics">{{ characteristic }}</li>
-    </ul>
-    <p>Age Span: {{ breeds[currentIndex].ageSpan }}</p>
-    <p>Weight: {{ breeds[currentIndex].weight }}</p>
+<main>
+  <div class="card">
+    <h1 class="app-title">Doggo Info</h1>
+    <img [src]="breeds[currentIndex].image.url" alt="{{ breeds[currentIndex].image.altText }}" class="breed-image">
+  
+    <div class="card-body">
+      <h2 class="card-title">{{ breeds[currentIndex].name }}</h2>
+      <p class="card-text">{{ breeds[currentIndex].description }}</p>
+      <ul>
+        <li *ngFor="let characteristic of breeds[currentIndex].characteristics">{{ characteristic }}</li>
+      </ul>
+      <h2>Age Span: {{ breeds[currentIndex].ageSpan }}</h2>
+      <h2>Weight: {{ breeds[currentIndex].weight }}</h2>
+    </div>
+  
+    <div class="card-footer">
+      <button (click)="previousBreed()" class="btn btn-primary card-button">Previous Breed</button>
+      <button (click)="nextBreed()" class="btn btn-primary card-button">Next Breed</button>
+    </div>
   </div>
+</main>
 
-  <div class="card-footer">
-    <button (click)="previousBreed()" class="btn btn-primary card-button">Previous Breed</button>
-    <button (click)="nextBreed()" class="btn btn-primary card-button">Next Breed</button>
-  </div>
-</div>
