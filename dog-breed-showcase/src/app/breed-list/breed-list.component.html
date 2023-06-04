@@ -1,4 +1,5 @@
 <div class="card">
+  <h1 class="app-title">Doggo Info</h1>
   <img [src]="breeds[currentIndex].image" alt="{{ breeds[currentIndex].name }}" class="breed-image">
 
   <div class="card-body">
@@ -12,7 +13,7 @@
   </div>
 
   <div class="card-footer">
-    <button (click)="previousBreed()" class="btn btn-primary">Previous Breed</button>
-    <button (click)="nextBreed()" class="btn btn-primary">Next Breed</button>
+    <button (click)="previousBreed()" class="btn btn-primary card-button">Previous Breed</button>
+    <button (click)="nextBreed()" class="btn btn-primary card-button">Next Breed</button>
   </div>
 </div>
