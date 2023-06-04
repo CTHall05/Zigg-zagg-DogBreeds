@@ -1,0 +1,18 @@
+<div class="card">
+  <img [src]="breeds[currentIndex].image" alt="{{ breeds[currentIndex].name }}" class="breed-image">
+
+  <div class="card-body">
+    <h2 class="card-title">{{ breeds[currentIndex].name }}</h2>
+    <p class="card-text">{{ breeds[currentIndex].description }}</p>
+    <ul>
+      <li *ngFor="let characteristic of breeds[currentIndex].characteristics">{{ characteristic }}</li>
+    </ul>
+    <p>Age Span: {{ breeds[currentIndex].ageSpan }}</p>
+    <p>Weight: {{ breeds[currentIndex].weight }}</p>
+  </div>
+
+  <div class="card-footer">
+    <button (click)="previousBreed()" class="btn btn-primary">Previous Breed</button>
+    <button (click)="nextBreed()" class="btn btn-primary">Next Breed</button>
+  </div>
+</div>
