@@ -2,6 +2,10 @@
 
 This Angular application allows users to explore different dog breeds and view a short bio for each breed. The application is designed with a focus on web accessibility and follows best practices such as test-driven development and SOLID principles. It utilizes a NestJS API to retrieve dog breed data, but also includes a fallback mechanism to retrieve data from the frontend in case the API is not available.
 
+## Video Link Explaining Project:
+
+https://youtu.be/jCAe5c1YQ6g
+
 ## Features
 
 - Display a list of different dog breeds
